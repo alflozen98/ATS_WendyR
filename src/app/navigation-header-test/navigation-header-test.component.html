@@ -1,0 +1,44 @@
+<div class="header-container">
+
+    <div class="carousel">
+        <div class="carousel-text">
+            &nbsp; Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+            Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+            Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+            Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+            Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+            Envio grátis a partir de $299 &nbsp; &nbsp; &nbsp; &nbsp;
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="logo">
+            {{nombreTienda}}
+        </div>
+
+        <div class="action-buttons">
+            <ul *ngFor="let item of menu">
+                <li *ngIf="item.name!=='Favoritos'; else isFavAvailable">
+                    <a href="#">
+                        <mat-icon class="menu-icon-button">{{item.icon}}</mat-icon>
+                    </a>
+                </li>
+                <ng-template #isFavAvailable>
+                    <li *ngIf="isLoggedIn">
+                        <a href="#">
+                            <mat-icon class="menu-icon-button">{{item.icon}}</mat-icon>
+                        </a>
+                    </li>
+                </ng-template>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="categories">
+        <ul *ngFor="let cat of categorias">
+            <li><a href="#">{{cat}}</a></li>
+        </ul>
+    </div>
+
+</div>

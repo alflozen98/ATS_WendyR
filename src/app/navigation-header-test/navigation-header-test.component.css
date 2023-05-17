@@ -1,0 +1,97 @@
+.header-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.material-icons{
+    font-family: 'Material Icons' !important;
+}
+
+.carousel {
+    grid-row: 1;
+    background-color: black;
+    color: azure;
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carousel-text {
+    animation: marquesina 20s linear infinite;
+    padding-left: 100%;
+    display: inline-block;
+}
+
+@keyframes marquesina {
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.menu {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.logo {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-icon-button {
+    font-size: 20px;
+    color: black;
+}
+
+.menu-icon-button:hover {
+    color: #8f8f8f;
+}
+
+.categories {
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 1px 8px;
+    text-decoration: none;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+}
+
+li a:hover {
+    color: blue;
+}
